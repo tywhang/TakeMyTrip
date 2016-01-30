@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/site.css">
+  <title>TakeMyTrip</title>
+</head>
+<body>
+<div class="container">
+  <div class="col-md-12"></div>
+    <h1>Search data</h1>
+    <p>Depart:
+      <input type="text" id="departureLocaton" class="form-control" placeholder="LAX/SEA" required="" autofocus="" readonly="readonly">
+      <a href="">change</a>
+    </p>
+    <p>Arrival:
+      <input type="text" id="arrivalLocation" class="form-control" placeholder="LAX/SEA" required="" readonly="readonly">
+      <a href="">change</a>
+    </p>
+    <h4 class="form-signin-heding">Date Range</h4>
+    <p>Depart Day:
+      <input type="date" id="departureLocaton" class="form-control" placeholder="01/01/2017" required="" readonly="readonly">
+      <input type="time" id="arrivalTime" class="form-control" placeholder="01/23/2017" required="" readonly="readonly">
+      <a href="">change</a>
+    </p>
+    <p>Return Day:
+      <input type="date" id="arrivalLocation" class="form-control" placeholder="01/23/2017" required="" readonly="readonly">
+      <input type="time" id="arrivalTime" class="form-control" placeholder="01/23/2017" required="" readonly="readonly">
+      <a href="">change</a>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <h1>Flight Results</h1>
+    <h3>Take This Flight</h3>
+    <h3>Best Available Flights</h3>
+  </div>
+</div>
+</body>
+<script>
+  $(document).ready(function(){
+    var auth = "expedia-apikey key=" + 'jMetHK00Ra8N45biTBo0yYy5wJfpWXqO'
+    $.ajax({
+      url: "http://terminal2.expedia.com/x/mflights/search?departureAirport=LAX&arrivalAirport=ORD&departureDate=2016-02-22&apikey=jMetHK00Ra8N45biTBo0yYy5wJfpWXqO",
+      beforeSend: function( request ) {
+        request.setRequestHeader("Authorization", auth);
+      }
+    }).done(function( data ) {
+      console.log(data)
+    }).fail(function(data){
+      console.log(data);
+    });
+  })
+ 
+
+</script>
