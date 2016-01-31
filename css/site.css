@@ -1,3 +1,202 @@
-.formContainer {
-  width: 400px;
+.body-wrapper {
+  max-width: 960px;
+  margin: 24px auto;
+}
+
+nav {
+  border-bottom: 1px solid lightGray;
+}
+
+.top-nav-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav-links {
+  width: 50%;
+}
+
+.bottom-nav-links {
+  width: 75%;
+}
+
+.link-container {
+  padding: 0;
+  margin-top: 12px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expedia-logo {
+  width: 200px;
+  height: 55px;
+}
+
+.expedia-bell {
+  width: 18px;
+  height: 20px;
+}
+
+.airline-image {
+  height: 30px;
+  width: 150px
+}
+
+.trip-container {
+  width: 75%;
+}
+
+.trip-container-header {
+  display: flex;
+  align-items: center;
+}
+
+.trip-container-header h2 {
+  display: inline;
+  margin-right: 12px;
+  margin-top: 10px;
+}
+
+.blue-button {
+  background-color: #22335D;
+  color: white;
+  border: 0;
+  padding: 6px 18px;
+  border-radius: 5px;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+  border: 0;
+  padding: 6px 18px;
+  border-radius: 5px;
+}
+
+.button {
+  margin: 0 4px;
+}
+
+.gray-button {
+  background-color: lightGray;
+  border: 0;
+  height: 32px;
+  width: 102px;
+}
+
+.trip-container-section-header {
+  background-color: #22335D;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 4px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+.trip-section {
+  margin-left: 45px;
+}
+.trip-container-section-header img {
+  width: 40px;
+  height: 40px;
+}
+
+.trip-container-section-header h3 {
+  margin: 6px;
+}
+
+.trip-container-section-header p {
+  margin: 0;
+  margin-right: 12px;
+  flex: 1;
+  text-align: right;
+}
+
+.trip-section-header {
+  background-color: #D5E8EF;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.trip-section-header h4 {
+  margin: 0;
+}
+
+.trip-section-body {
+  border: 2px solid #D5E8EF;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.airport-name {
+  color: gray;
+  font-weight: 400;
+}
+
+.flight-time {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bottom-links {
+  margin-top: 50px;
+}
+
+.cancel-button {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.right-panel {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.panel-head {
+  background-color: #C3F6AD;
+  padding: 4px;
+  border-radius: 2px;
+  margin-top: 10px;
+  border-bottom: 2px solid #C3F6AD;
+}
+.panel-head h5 {
+  margin-left: 10px;
+}
+.panel-body {
+  border: 2px solid #C3F6AD;
+}
+.search-result-container {
+  padding: 0 100px;
+}
+.arrow-right {
+  height: 40px;
+  width: 40px;
+}
+.cancellation-container {
+  margin: 0px;
+}
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  -webkit-transform: skew(20deg);
+     -moz-transform: skew(20deg);
+       -o-transform: skew(20deg);
+  background: #F8B915;
+  border-radius: 5px;
+  margin: 0 0 10px 17px;
+  display: inline-block;
+}
+.first-state, .third-state {
+  background: #22335D;
+}
+.second-state {
+  background-color: #F8B915;
 }

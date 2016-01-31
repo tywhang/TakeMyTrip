@@ -55,46 +55,34 @@
         </div>
         <div class="trip-container-section">
           <div class="trip-container-section-header">
-            <img src="./images/planeicon.png" alt="">
-            <h3>Flights</h3>
-            <p>Show Details</p>
+            <h3>Flight Cancellation</h3>
           </div>
+          <div class="parallelogram first-state"></div>
+          <div class="parallelogram second-state"></div>
+          <div class="parallelogram third-state"></div>
           <div class="trip-section">
             <div class="trip-section-header">
-              <h4>Mon, Jun 1 <span>- Departure</span></h4>
+              <h4>Expedia TakeMyFlight</h4>
             </div>
             <div class="trip-section-body">
-              <img class="airline-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/United_Airlines_Logo.svg/1024px-United_Airlines_Logo.svg.png">
-              <div class="depart-info">
-                <h5 class="airport-name">McAllen</h5>
-                <p class="flight-time">MFE 5:43pm</p>
+              <div class="left-panel">
+                <h4>What is TakeMyFlight?</h4>
+                <p>
+                  Expedia will facilitate finding a buyer.
+                </p>
               </div>
-              <span>
-                <img class="arrow-right" src="./images/arrowRight.png">
-              </span>
-              <div class="arrive-info">
-                <h5 class="airport-name">View Fort</h5>
-                <p class="flight-time">MFE 1:28pm + 1 day</p>
+              <div class="right-panel">
+                <button class="blue-button" id="findBuyerButton">Find me a buyer</button>
               </div>
-              <a href="./cancellation.html"><img class="cancel-button" src="./images/cancel.png"></a>
             </div>
-            <div class="trip-section-header">
-              <h4>Mon, Jun 1 <span>- Return</span></h4>
+          </div>
+          <div class="success-container">
+            <div class="panel-head">
+              <h5>ALL DONE!</h5>
             </div>
-            <div class="trip-section-body">
-              <img class="airline-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/United_Airlines_Logo.svg/1024px-United_Airlines_Logo.svg.png">
-              <div class="depart-info">
-                <h5 class="airport-name">View Fort</h5>
-                <p class="flight-time">MFE 3:15pm</p>
-              </div>
-              <span>
-                <img class="arrow-right" src="./images/arrowRight.png">
-              </span>
-              <div class="arrive-info">
-                <h5 class="airport-name">McAllen</h5>
-                <p class="flight-time">MFE 10:26pm + 1 day</p>
-              </div>
-              <a href="./cancellation.html"><img class="cancel-button" src="./images/cancel.png"></a>
+            <div class="panel-body">
+              <p>Expedia will attempt to find a buyer for your ticket.</p>
+              <p>If no buyer is found Expedia will cancel your ticket at the regular cost of cancellation.</p>
             </div>
           </div>
         </div>
@@ -118,4 +106,12 @@
     </div>
   </div>
 </body>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.success-container').hide();
+    $('#findBuyerButton').click(function(){
+      $('.success-container').fadeIn("slow")
+    })
+  })
+</script>
 </html>
